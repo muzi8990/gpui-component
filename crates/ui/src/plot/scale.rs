@@ -6,7 +6,7 @@ mod sealed;
 pub use band::ScaleBand;
 pub use linear::ScaleLinear;
 pub use point::ScalePoint;
-pub(crate) use sealed::Sealed;
+pub use sealed::Sealed;
 
 pub trait Scale<T> {
     /// Get the tick of the scale.

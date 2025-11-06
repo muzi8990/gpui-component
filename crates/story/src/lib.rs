@@ -17,21 +17,21 @@ mod form_story;
 mod group_box_story;
 mod icon_story;
 mod image_story;
-mod input_story;
+pub mod input_story;
 mod kbd_story;
 mod label_story;
 mod list_story;
 mod menu_story;
 mod modal_story;
 mod notification_story;
-mod number_input_story;
+pub mod number_input_story;
 mod otp_input_story;
 mod popover_story;
 mod progress_story;
 mod radio_story;
 mod resizable_story;
 mod scrollable_story;
-mod select_story;
+pub mod select_story;
 mod sheet_story;
 mod sidebar_story;
 mod skeleton_story;
@@ -41,8 +41,8 @@ mod switch_story;
 mod table_story;
 mod tabs_story;
 mod tag_story;
-mod textarea_story;
-mod themes;
+pub mod textarea_story;
+pub mod themes;
 mod title_bar;
 mod toggle_story;
 mod tooltip_story;
@@ -161,7 +161,7 @@ pub struct AppState {
     pub invisible_panels: Entity<Vec<SharedString>>,
 }
 impl AppState {
-    fn init(cx: &mut App) {
+    pub fn init(cx: &mut App) {
         let state = Self {
             invisible_panels: cx.new(|_| Vec::new()),
         };
